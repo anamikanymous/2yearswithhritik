@@ -1,37 +1,56 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2 Years With You ❤️</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffdde1,#ee9ca7);display:flex;align-items:center;justify-content:center;height:100vh;overflow:hidden}
-.card{text-align:center;background:#fff;padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2);max-width:600px}
-button{padding:12px 24px;font-size:18px;border:none;border-radius:30px;cursor:pointer;margin:10px}
-#yes{background:#ff4d6d;color:#fff}
-#no{background:#eee;position:relative}
-.hidden{display:none}
-</style></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Isha ❤️ Hritik | Happy 2nd Anniversary</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
 <body>
-<div class="card" id="page1">
-<h1>Happy 2nd Anniversary ❤️</h1>
-<p>Two years, countless memories, and you are my home.</p>
-<button onclick="next()">Open Your Surprise</button>
+
+<div class="background"></div>
+
+<div class="overlay"></div>
+
+<div id="hearts"></div>
+
+<div class="hero">
+
+    <div class="glass-card">
+
+        <span class="badge">♡ 2 Years Together ♡</span>
+
+        <h1>
+            Happy 2nd Anniversary
+        </h1>
+
+        <h2>
+            Isha ❤️ Hritik
+        </h2>
+
+        <p>
+            Two years. Countless memories.
+            One beautiful story.
+            And this is only the beginning...
+        </p>
+
+        <button id="startBtn">
+            Open Your Surprise ✨
+        </button>
+
+    </div>
+
 </div>
 
-<div class="card hidden" id="page2">
-<h2>Will you keep choosing me for many more adventures?</h2>
-<button id="yes" onclick="yes()">Yes ❤️</button>
-<button id="no">No</button>
-</div>
+<script src="script.js"></script>
 
-<script>
-function next(){page1.classList.add('hidden');page2.classList.remove('hidden');}
-const no=document.getElementById('no');
-no.addEventListener('mouseover',()=>{
- no.style.position='fixed';
- no.style.left=Math.random()*(window.innerWidth-120)+'px';
- no.style.top=Math.random()*(window.innerHeight-60)+'px';
-});
-function yes(){
-document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:Arial;text-align:center;background:#fff0f5"><div><h1>I knew you would say YES! ❤️</h1><p>Happy 2nd Anniversary, Hritik.</p><p>Thank you for making every day brighter. Here\'s to many more years together.<br>Love, Isha ❤️</br></p></div></div>';
-}
-</script>
-</body></html>
+</body>
+</html>
