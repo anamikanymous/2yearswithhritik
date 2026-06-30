@@ -13,7 +13,7 @@ function createHeart(){
 
     heart.innerHTML = "🤍";
 
-    heart.style.position = "fixed";
+   heart.style.position = "absolute";
 
     heart.style.left = Math.random()*100 + "vw";
 
@@ -29,7 +29,7 @@ function createHeart(){
 
     heart.style.zIndex = 1;
 
-    document.body.appendChild(heart);
+    heartsContainer.appendChild(heart);
 
     const duration = 7000 + Math.random()*4000;
 
