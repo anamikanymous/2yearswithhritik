@@ -115,9 +115,64 @@ function moveButton(){
 
 noBtn.addEventListener("mouseenter",moveButton);
 noBtn.addEventListener("click",moveButton);
+/* -----------------------
+   YES Button
+------------------------ */
+
+const page4 = document.getElementById("page4");
+
+function createConfetti(){
+
+    const colors=[
+        "#D4AF37",
+        "#E8CFC3",
+        "#F5E6D3",
+        "#C08457",
+        "#FFFFFF"
+    ];
+
+    for(let i=0;i<120;i++){
+
+        const piece=document.createElement("div");
+
+        piece.className="confetti";
+
+        piece.style.left=Math.random()*100+"vw";
+        piece.style.top="-20px";
+
+        piece.style.background=
+            colors[Math.floor(Math.random()*colors.length)];
+
+        piece.style.animationDelay=(Math.random()*0.5)+"s";
+
+        piece.style.transform=`scale(${0.6+Math.random()})`;
+
+        document.body.appendChild(piece);
+
+        setTimeout(()=>{
+
+            piece.remove();
+
+        },3000);
+
+    }
+
+}
 
 document.getElementById("yesBtn").onclick=()=>{
 
-    alert("🎉 Confetti coming in Phase 4 ❤️");
+    page3.classList.add("fade-out");
+
+    setTimeout(()=>{
+
+        page3.classList.add("hidden");
+
+        page4.classList.remove("hidden");
+        page4.classList.add("fade-in");
+
+        createConfetti();
+
+    },600);
 
 };
+
