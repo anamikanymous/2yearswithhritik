@@ -159,11 +159,14 @@ function createConfetti(){
 
 }
 
-document.getElementById("yesBtn").onclick=()=>{
+const page4 = document.getElementById("page4");
+const page5 = document.getElementById("page5");
+
+document.getElementById("yesBtn").onclick = () => {
 
     page3.classList.add("fade-out");
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         page3.classList.add("hidden");
 
@@ -172,7 +175,23 @@ document.getElementById("yesBtn").onclick=()=>{
 
         createConfetti();
 
-    },600);
+        // After 4 seconds, show the gallery
+        setTimeout(() => {
+
+            page4.classList.add("fade-out");
+
+            setTimeout(() => {
+
+                page4.classList.add("hidden");
+
+                page5.classList.remove("hidden");
+                page5.classList.add("fade-in");
+
+            }, 600);
+
+        }, 4000);
+
+    }, 600);
 
 };
 
