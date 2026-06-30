@@ -303,3 +303,17 @@ width:100%;
 }
 
 }
+/* Floating Hearts Container */
+#hearts{
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Keep the content above the hearts */
+.hero{
+    position: relative;
+    z-index: 10;
+}
