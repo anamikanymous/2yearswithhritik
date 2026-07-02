@@ -478,3 +478,33 @@ width:100%;
 .gallery-card{
     max-width:950px;
 }
+/* ===========================
+   PHASE 6
+=========================== */
+
+.letter-card{
+    max-width:850px;
+}
+
+.letter{
+    text-align:left;
+    margin:35px auto;
+    max-width:650px;
+}
+
+.letter p{
+    font-size:20px;
+    line-height:2;
+    color:#6F625B;
+    margin-bottom:28px;
+}
+
+.letter::first-letter{
+    font-size:52px;
+    font-family:'Cormorant Garamond',serif;
+    color:#B76E79;
+}
+
+#finalBtn{
+    margin-top:20px;
+}
