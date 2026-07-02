@@ -508,3 +508,27 @@ width:100%;
 #finalBtn{
     margin-top:20px;
 }
+/* ===========================
+   LETTER PAGE
+=========================== */
+
+.letter-content{
+    max-width:700px;
+    margin:40px auto;
+    text-align:left;
+}
+
+.letter-content p{
+    font-size:20px;
+    line-height:2;
+    color:#6F625B;
+    margin-bottom:24px;
+}
+
+.signature{
+    text-align:right;
+    margin-top:40px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:32px;
+    color:#8A5D3B;
+}
