@@ -214,3 +214,28 @@ if (galleryBtn) {
     };
 
 }
+/* ---------- Final Button ---------- */
+
+const finalBtn = document.getElementById("finalBtn");
+
+if(finalBtn){
+
+    finalBtn.onclick = () => {
+
+        const page6 = document.getElementById("page6");
+        const page7 = document.getElementById("page7");
+
+        page6.classList.add("fade-out");
+
+        setTimeout(() => {
+
+            page6.classList.add("hidden");
+
+            page7.classList.remove("hidden");
+            page7.classList.add("fade-in");
+
+        }, 600);
+
+    };
+
+}
