@@ -194,13 +194,22 @@ document.getElementById("yesBtn").onclick=()=>{
 
 /* ---------- Gallery Button ---------- */
 
-const galleryBtn=document.getElementById("galleryNextBtn");
+const galleryBtn = document.getElementById("galleryNextBtn");
 
-if(galleryBtn){
+if (galleryBtn) {
 
-    galleryBtn.onclick=()=>{
+    galleryBtn.onclick = () => {
 
-        alert("💌 Phase 6 coming next!");
+        page5.classList.add("fade-out");
+
+        setTimeout(() => {
+
+            page5.classList.add("hidden");
+
+            document.getElementById("page6").classList.remove("hidden");
+            document.getElementById("page6").classList.add("fade-in");
+
+        }, 600);
 
     };
 
