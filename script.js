@@ -52,18 +52,22 @@ const page5=document.getElementById("page5");
 
 /* ---------- Page 1 ---------- */
 
-document.getElementById("startBtn").onclick=()=>{
+document.getElementById("startBtn").onclick = () => {
+
+    bgMusic.play().catch(error => {
+        console.log("Music couldn't autoplay:", error);
+    });
 
     page1.classList.add("fade-out");
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         page1.classList.add("hidden");
 
         page2.classList.remove("hidden");
         page2.classList.add("fade-in");
 
-    },600);
+    }, 600);
 
 };
 
