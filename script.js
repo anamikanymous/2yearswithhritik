@@ -6,6 +6,8 @@
 
 const heartsContainer = document.getElementById("hearts");
 
+const bgMusic = document.getElementById("bgMusic");
+
 function createHeart() {
 
     const heart = document.createElement("div");
