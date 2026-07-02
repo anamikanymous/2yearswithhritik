@@ -23,7 +23,7 @@ body{
 
     animation:bgMove 15s ease infinite;
 
-    overflow:hidden;
+    overflow-x:hidden;
 
     min-height:100vh;
 
