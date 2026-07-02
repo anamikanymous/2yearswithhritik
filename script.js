@@ -1,51 +1,54 @@
 /* ==========================
    Isha ❤️ Hritik
-   Phase 3 Script
 ========================== */
+
+/* ---------- Floating Hearts ---------- */
 
 const heartsContainer = document.getElementById("hearts");
 
-/* -----------------------
-   Floating Hearts
------------------------- */
+function createHeart() {
 
-function createHeart(){
+    const heart = document.createElement("div");
 
-    const heart=document.createElement("div");
+    heart.innerHTML = "🤍";
 
-    heart.innerHTML="🤍";
-
-    heart.style.position="absolute";
-    heart.style.left=Math.random()*100+"vw";
-    heart.style.top="110vh";
-    heart.style.fontSize=(18+Math.random()*18)+"px";
-    heart.style.opacity=.7;
-    heart.style.pointerEvents="none";
-    heart.style.transition="transform 10s linear, opacity 10s linear";
+    heart.style.position = "fixed";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.top = "110vh";
+    heart.style.fontSize = (18 + Math.random() * 18) + "px";
+    heart.style.opacity = ".7";
+    heart.style.pointerEvents = "none";
+    heart.style.transition = "transform 10s linear, opacity 10s linear";
+    heart.style.zIndex = "1";
 
     heartsContainer.appendChild(heart);
 
-    requestAnimationFrame(()=>{
+    requestAnimationFrame(() => {
 
-        heart.style.transform=`translateY(-130vh) rotate(${Math.random()*360}deg)`;
+        heart.style.transform =
+            `translateY(-130vh) rotate(${Math.random()*360}deg)`;
 
-        heart.style.opacity=0;
+        heart.style.opacity = 0;
 
     });
 
-    setTimeout(()=>heart.remove(),10000);
+    setTimeout(() => heart.remove(),10000);
 
 }
 
 setInterval(createHeart,500);
 
-/* -----------------------
-   Pages
------------------------- */
+
+/* ---------- Pages ---------- */
 
 const page1=document.getElementById("page1");
 const page2=document.getElementById("page2");
 const page3=document.getElementById("page3");
+const page4=document.getElementById("page4");
+const page5=document.getElementById("page5");
+
+
+/* ---------- Page 1 ---------- */
 
 document.getElementById("startBtn").onclick=()=>{
 
@@ -62,6 +65,9 @@ document.getElementById("startBtn").onclick=()=>{
 
 };
 
+
+/* ---------- Page 2 ---------- */
+
 document.getElementById("continueBtn").onclick=()=>{
 
     page2.classList.add("fade-out");
@@ -77,9 +83,8 @@ document.getElementById("continueBtn").onclick=()=>{
 
 };
 
-/* -----------------------
-   Runaway No Button
------------------------- */
+
+/* ---------- NO Button ---------- */
 
 const noBtn=document.getElementById("noBtn");
 
@@ -115,11 +120,9 @@ function moveButton(){
 
 noBtn.addEventListener("mouseenter",moveButton);
 noBtn.addEventListener("click",moveButton);
-/* -----------------------
-   YES Button
------------------------- */
 
-const page4 = document.getElementById("page4");
+
+/* ---------- Confetti ---------- */
 
 function createConfetti(){
 
@@ -141,32 +144,26 @@ function createConfetti(){
         piece.style.top="-20px";
 
         piece.style.background=
-            colors[Math.floor(Math.random()*colors.length)];
+        colors[Math.floor(Math.random()*colors.length)];
 
-        piece.style.animationDelay=(Math.random()*0.5)+"s";
-
-        piece.style.transform=`scale(${0.6+Math.random()})`;
+        piece.style.animationDelay=Math.random()+"s";
 
         document.body.appendChild(piece);
 
-        setTimeout(()=>{
-
-            piece.remove();
-
-        },3000);
+        setTimeout(()=>piece.remove(),3000);
 
     }
 
 }
 
-const page4 = document.getElementById("page4");
-const page5 = document.getElementById("page5");
 
-document.getElementById("yesBtn").onclick = () => {
+/* ---------- YES Button ---------- */
+
+document.getElementById("yesBtn").onclick=()=>{
 
     page3.classList.add("fade-out");
 
-    setTimeout(() => {
+    setTimeout(()=>{
 
         page3.classList.add("hidden");
 
@@ -175,23 +172,36 @@ document.getElementById("yesBtn").onclick = () => {
 
         createConfetti();
 
-        // After 4 seconds, show the gallery
-        setTimeout(() => {
+        setTimeout(()=>{
 
             page4.classList.add("fade-out");
 
-            setTimeout(() => {
+            setTimeout(()=>{
 
                 page4.classList.add("hidden");
 
                 page5.classList.remove("hidden");
                 page5.classList.add("fade-in");
 
-            }, 600);
+            },600);
 
-        }, 4000);
+        },4000);
 
-    }, 600);
+    },600);
 
 };
 
+
+/* ---------- Gallery Button ---------- */
+
+const galleryBtn=document.getElementById("galleryNextBtn");
+
+if(galleryBtn){
+
+    galleryBtn.onclick=()=>{
+
+        alert("💌 Phase 6 coming next!");
+
+    };
+
+}
