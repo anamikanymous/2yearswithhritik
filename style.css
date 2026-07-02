@@ -532,3 +532,22 @@ width:100%;
     font-size:32px;
     color:#8A5D3B;
 }
+/* ===========================
+   TYPEWRITER EFFECT
+=========================== */
+
+.letter-content{
+    animation: letterFade 1.5s ease;
+}
+
+@keyframes letterFade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
